@@ -1,0 +1,170 @@
+<h2>Rutinas</h2>
+<hr>
+<div id="cont" class="container mt-5">
+  <div class="centrar">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="">
+        <span style="color: black; font-weight: bold" class="titulo">Buscar Rutinas</span>
+        <div class="col">
+          <div class="form-group">
+            <input type="text" class="form-control" name="filterPost" placeholder="Buscar..." [(ngModel)]="filterPost">
+          </div>
+        </div>
+        <br>
+        <!-- <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a id="Existencias" class="nav-link" [class.active]="mostrarSinFallos" (click)="mostrarDiv('SinFallos')">Sin
+              Problemas</a>
+          </li>
+          <li class="nav-item">
+            <a id="SinExistencias" class="nav-link" [class.active]="mostrarConFallos"
+              (click)="mostrarDiv('ConFallos')">Con Problemas</a>
+          </li>
+        </ul> -->
+        <!-- <div *ngIf="mostrarSinFallos" id="SinFallos">
+          <br>
+          <button class="btn btn-success float-end" routerLink="/crear-recurso"
+            style="background-color: #8dc640;border: #8dc640;"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+            NUEVO</button>
+          <table class="table table-striped mt-3">
+            <thead>
+              <tr>
+                <th scope="col">Numero de Serie</th>
+                <th scope="col">Recurso</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Estatus</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let recurso of listRecursos | filter:filterPost">
+                <ng-container *ngIf="(recurso.estatus == 'Sin Problemas')">
+                  <td>{{ recurso.numSerie}}</td>
+                  <td>{{ recurso.recurso }}</td>
+                  <td>{{ recurso.marca }}</td>
+                  <td>{{ recurso.modelo}}</td>
+                  <td>{{ recurso.estatus }}</td>
+                  <td [routerLink]="['/editar-recurso', recurso._id]">
+                    <i class="fas fa-edit text-primary"></i>
+                  </td>
+                  <td (click)="eliminarRecurso(recurso._id)">
+                    <i class="fas fa-trash text-danger"></i>
+                  </td>
+                  <td [routerLink]="['/eliminar-recurso', recurso._id]">
+                    <i class="fas fa-solid fa-delete-left text-warning"></i>
+                  </td>
+                </ng-container>
+              </tr>
+            </tbody>
+          </table>
+        </div> -->
+        <!--  <div *ngIf="mostrarConFallos" id="ConFallos">
+          <table class="table table-striped mt-3">
+            <thead>
+              <tr>
+                <th scope="col">Numero de Serie</th>
+                <th scope="col">Recurso</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Estatus</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let recurso of listRecursos | filter:filterPost">
+                <ng-container *ngIf="(recurso.estatus == 'Con Problemas')">
+                  <td>{{ recurso.numSerie}}</td>
+                  <td>{{ recurso.recurso }}</td>
+                  <td>{{ recurso.marca }}</td>
+                  <td>{{ recurso.modelo}}</td>
+                  <td>{{ recurso.estatus }}</td>
+                  <td [routerLink]="['/edit-recurso', recurso._id]">
+                    <i class="fas fa-edit text-primary"></i>
+                  </td>
+                  <td (click)="eliminarRecurso(recurso._id)">
+                    <i class="fas fa-trash text-danger"></i>
+                  </td>
+                </ng-container>
+              </tr>
+            </tbody>
+          </table>
+        </div> -->
+      </div>
+
+      <section class="articles">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="../../../assets/pesas.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Rutinas de Peso</h2>
+              <p>
+                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
+                bibendum
+                eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+              </p>
+              <a href="#" class="read-more">
+                Read more <span class="sr-only">about this is some title</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article>
+
+          <div class="article-wrapper">
+            <figure>
+              <img src="../../../assets/tetones.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Rutinas Tronco Súperior</h2>
+              <p>
+                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
+                bibendum
+                eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+              </p>
+              <a href="#" class="read-more">
+                Read more <span class="sr-only">about this is some title</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+        <article>
+
+          <div class="article-wrapper">
+            <figure>
+              <img src="../../../assets/patas.jpeg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Rutinas Tronco Inferior</h2>
+              <p>
+                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
+                bibendum
+                eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
+              </p>
+              <a href="#" class="read-more">
+                Read more <span class="sr-only">about this is some title</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </div>
+</div>
