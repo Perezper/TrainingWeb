@@ -7,7 +7,8 @@
         <span style="color: black; font-weight: bold" class="titulo">Buscar Rutinas</span>
         <div class="col">
           <div class="form-group">
-            <input type="text" class="form-control" name="filterPost" placeholder="Buscar..." [(ngModel)]="filterPost">
+            <input type="text" class="form-control" name="filterPost" placeholder="Buscar...">
+            <!-- [(ngModel)]="filterPost" -->
           </div>
         </div>
         <br>
@@ -91,8 +92,7 @@
           </table>
         </div> -->
       </div>
-
-      <section class="articles">
+      <section class="articles" [hidden]="!rutinas">
         <article>
           <div class="article-wrapper">
             <figure>
@@ -100,13 +100,8 @@
             </figure>
             <div class="article-body">
               <h2>Rutinas de Peso</h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
-                bibendum
-                eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
               <a href="#" class="read-more">
-                Read more <span class="sr-only">about this is some title</span>
+                Ver rutina<span class="sr-only">about this is some title</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
@@ -117,20 +112,14 @@
           </div>
         </article>
         <article>
-
           <div class="article-wrapper">
             <figure>
               <img src="../../../assets/tetones.jpg" alt="" />
             </figure>
             <div class="article-body">
               <h2>Rutinas Tronco Súperior</h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
-                bibendum
-                eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
-              <a href="#" class="read-more">
-                Read more <span class="sr-only">about this is some title</span>
+              <a (click)="muestra()" class="read-more">
+                Ver rutina<span class="sr-only">about this is some title</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
@@ -141,20 +130,14 @@
           </div>
         </article>
         <article>
-
           <div class="article-wrapper">
             <figure>
               <img src="../../../assets/patas.jpeg" alt="" />
             </figure>
             <div class="article-body">
               <h2>Rutinas Tronco Inferior</h2>
-              <p>
-                Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue
-                bibendum
-                eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.
-              </p>
               <a href="#" class="read-more">
-                Read more <span class="sr-only">about this is some title</span>
+                Ver rutina<span class="sr-only">about this is some title</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
@@ -164,7 +147,166 @@
             </div>
           </div>
         </article>
+        <article>
+          <div class="article-wrapper">
+            <div class="article-body">
+              <h2>Rutina semanal</h2>
+              <table>
+                <tbody>
+                  <tr>
+                    <th>
+                      Martes/Espalda y hombro
+                    </th>
+                    <th>
+                      Miercoles/Pierna
+                    </th>
+                    <th>
+                      Jueves/Pecho biceps y tricep
+                    </th>
+                    <th>
+                      Viernes/Pierna y Gluteos
+                    </th>
+                    <th>
+                      Sabado/Espalda y hombro
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      3 series de remo sentada con triangulo 15 repeticiones
+                      3 series de remo con mancuernas 15 repeticiones
+                      3 series de jalon al pecho con hagarre abierto y cerrado 15 repeticiones de cada uno
+                      3 series del banco romando 15 repeticiones
+                      3 series de press militar alternado con laterales 15 repeticiones
+                      3 series de elevacion frontal de disco 15 repeticiones
+                      3 series de jalon al rostro con cuerda 15 repeticiones
+                    </td>
+                    <td>
+                      3 series de sentadilla de 10 repeticiones
+                      4 Series en prensa de 15 repeticiones
+                      3 series de setadilla estatica
+                      3 series de desplantes 15 de cada pie
+                      3 series de elavacion de talon 15 repeticiones
+                      3 series de extencion de cuadricep 15 repeticiones
+                      3 series de costureta 15 repeticiones
+                    </td>
+                    <td>
+                      3 series de press normal con mancuernas 15 repeticiones
+                      3 series en el peck 15 repeticiones
+                      3 series de lagartijas 15 repeticiones
+                      3 series de extencion copa a una mano 15 repeticiones
+                      3 series de rompe cráneos 15 repeticiones
+                      3 series de extencion tras nuca 15 repeticiones
+                      3 series de predicador con mancuernas 15 repeticiones
+                      3 series de martillos 15 repeticiones
+                      3 series de 21s con barra 15 repeticiones x
+                    </td>
+                    <td>
+                      3 series de elevacion de pelbis 15 repeticiones
+                      3 series de sentadillas sumo 15 repeticiones
+                      3 series de sentadilla bulgara 15 repeticiones
+                      3 series de abductores 15 repeticiones
+                      3 series de patada en polea 15 repeticiones
+                      3 series de curl de femoral acostada al fallo
+                      3 series de cuadripceps al fallo
+                    </td>
+                    <td>
+                      3 series de remo con mancuernas 15 repeticiones
+                      3 series de jalon al pecho con triangulo 15 repeticiones
+                      3 series en el peck 15 repeticiones
+                      3 series de banco inclinado con press militar 15 repeticiones
+                      3 series de elevacion lateral con mancuernas 15 repeticiones
+                      3 series de 21s con barra 15 repeticiones
+                      3 series de martillos 15 repeticiones
+                      3 series de extencion en polea 15 repeticiones
+                      3 series de rompe cráneos 15 repeticiones
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
       </section>
+      <article [hidden]="!listRutina">
+        <figure>
+          <img src="../../../assets/tetones.jpg" alt="" />
+        </figure>
+        <div class="article-body" id="troncoSup">
+          <h2>
+            Rutinas Tronco Superior
+          </h2>
+          <ul>
+            <li>
+              <h3>
+                Remo horizontal con mancuernas
+              </h3>
+            </li>
+            <li>
+              <video src="../../../assets/remohorizontal.mp4" controls></video>
+            </li>
+            <li>
+              <h3>
+                Press militar
+              </h3>
+            </li>
+            <li>
+              <video src="../../../assets/pressMilitar.mp4" controls></video>
+            </li>
+            <li>
+              <h3>
+                Flexiones
+              </h3>
+            </li>
+            <li>
+              <video src="../../../assets/flexiones.mp4" controls></video>
+            </li>
+            <li>
+              <h3>
+                Curl de bisep
+              </h3>
+            </li>
+            <li>
+              <img src="../../../assets/rutTs_4.jpg">
+            </li>
+            <li>
+              <h3>
+                Remo unilateral
+              </h3>
+            </li>
+            <li>
+              <img src="../../../assets/ruts_5.jpg">
+            </li>
+            <li>
+              <h3>
+                Elevaciones laterales con elevaciones frontales
+              </h3>
+            </li>
+            <li>
+              <img src="../../../assets/rutTs_6-1.jpg">
+            </li>
+            <li>
+              <img src="../../../assets/rutTd6-2.jpg">
+            </li>
+            <li>
+              <h3>
+                Press con mancuernas
+              </h3>
+            </li>
+            <li>
+              <img src="../../../assets/rutTs7.jpg">
+            </li>
+            <li>
+              <h3>
+                Curl de biseps overhead
+              </h3>
+            </li>
+            <li>
+              <img src="../../../assets/rutTs8.jpg">
+            </li>
+          </ul>
+        </div>
+        <button class="button-31" (click)="listRutina=false" (click)="rutinas=true">Cerrar</button>
+      </article>
     </div>
   </div>
 </div>

@@ -1,10 +1,4 @@
 <div class="center">
-  <div id="seccion_header" style="text-align: center;">
-    <h2>Dietas</h2>
-    <hr>
-  </div>
-</div>
-<div class="center">
   <div class="row">
     <div class="card">
       <!-- <div class="card-body text-center">
@@ -59,7 +53,7 @@
             <h5 style="text-align: start; margin-top: 10px;" *ngIf="listEmpleados.length == 0"> No hay empleados para
               mostrar</h5>
           </div> -->
-      <section class="articles">
+      <section class="articles" [hidden]="!Dietas">
         <article>
           <div class="article-wrapper">
             <figure>
@@ -72,7 +66,7 @@
                   casi total, los carbohidratos
                   de la alimentación.</strong>
               </p>
-              <a href="#" class="read-more">
+              <a (click)="mostrar()" class="read-more">
                 Leer más <span class="sr-only">about this is some title</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd"
@@ -131,7 +125,7 @@
         </article>
       </section>
       <br>
-      <div class="keto">
+      <div [hidden]="!listDieta" id="keto">
         <article>
           <div class="article-wrapper">
             <figure>
@@ -140,12 +134,142 @@
             <div class="article-body">
               <h2>Dieta keto</h2>
               <p>
-                La dieta keto es un controvertido régimen alimenticio que consiste en <strong>suprimir, de forma
-                  casi total, los carbohidratos
-                  de la alimentación.</strong>
+                La dieta cetogénica es una dieta muy baja en carbohidratos y alta en grasas. Para lograr resultados
+                positivos, esta
+                dieta tiene que ser muy baja en carbohidratos, alta en grasas dietéticas e incluir una moderada cantidad
+                de proteínas.
+                Esta reducción en carbohidratos hace que tu cuerpo entre en un estado metabólico llamado cetosis. Cuando
+                esto pasa,tu
+                cuerpo se vuelve increíblemente eficiente quemando grasa para obtener energía. La también llamada dieta
+                keto puede
+                reducir masivamente los niveles de azúcar e insulina en la sangre, y contribuir a la pérdida de peso.
               </p>
+              <h3>Beneficios de la dieta Keto</h3>
+              <br>
+              <p>Contribuye a la pérdida de peso
+                Disminuye la presión sanguínea
+                Retrasa los efectos del envejecimiento
+                Mejora la calidad del sueño y el estado de ánimo
+                Incrementa la eficiencia energética</p>
+              <table class="tablaKeto">
+                <tbody>
+                  <tr>
+                    <th>
+                      Día
+                    </th>
+                    <th>
+                      Desayuno
+                    </th>
+                    <th>
+                      Comida
+                    </th>
+                    <th>
+                      Cena
+                    </th>
+                  </tr>
+                  <tr>
+                    <td>
+                      Lunes
+                    </td>
+                    <td>
+                      Yogur de coco con frutos rojos
+                    </td>
+                    <td>
+                      Pavo a la plancha con ensalada
+                    </td>
+                    <td>
+                      Tarta de salmón y aguacate
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Martes
+                    </td>
+                    <td>
+                      Pudding de chía
+                    </td>
+                    <td>
+                      Crema de aguacate y merluza con verduras
+                    </td>
+                    <td>
+                      Tallarines de calabacín con setas
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Miercoles
+                    </td>
+                    <td>
+                      Gachas de coco y chocolate 85%
+                    </td>
+                    <td>
+                      Work de pollo con espárragos, brócoli y crema de cacahuate
+                    </td>
+                    <td>
+                      Pimientos rellenos de queso y jamón york
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Jueves
+                    </td>
+                    <td>
+                      Tortilla grancesa con 4 rodaja de tomate
+                    </td>
+                    <td>
+                      Lasaña de calabacín y carne picada
+                    </td>
+                    <td>
+                      Rollitos de salmón y queso crema
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Viernes
+                    </td>
+                    <td>
+                      Queso fresco batido con arándanos y fresas
+                    </td>
+                    <td>
+                      Caldo de verduras + albóndigas de pollo y queso
+                    </td>
+                    <td>
+                      Ensalada de tomate + tortilla se atún
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Sabado
+                    </td>
+                    <td>
+                      Pan nube con jámon y queso
+                    </td>
+                    <td>
+                      Huevos Poché con gulas y gambas
+                    </td>
+                    <td>
+                      Pizza de queso y jamón con base de coliflor
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Domingo
+                    </td>
+                    <td>
+                      Tostadas grancesas keto
+                    </td>
+                    <td>
+                      Sopa de brócoli + pavo a la plancha con espárragos
+                    </td>
+                    <td>
+                      Ensalada de Atún rojo y rúcula
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
+          <button class="button-31" (click)="listDieta=false" (click)="Dietas=true">Cerrar</button>
         </article>
       </div>
     </div>

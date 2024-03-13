@@ -18,10 +18,9 @@ const routes: Routes = [
   { path: 'listar-recurso', component: ListarRecursoComponent },
   { path: 'crear-recurso', component: CrearRecursoComponent},
   { path: 'editar-recurso/:id', component: CrearRecursoComponent},
-  { path: 'eliminar-recurso/:id', component: EliminarRecursoComponent},
   { path: 'edit-recurso/:id', component: EditRecursoComponent},
   {path: 'asignacion', component: AsignacionComponent},
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', component: EliminarRecursoComponent}
 ];
 
 @NgModule({

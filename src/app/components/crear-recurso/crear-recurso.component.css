@@ -84,7 +84,7 @@ hr {
 
 
 article {
-    --img-scale: 1.001;
+    --img-scale: 1.000;
     --title-color: black;
     --link-icon-translate: -20px;
     --link-icon-opacity: 0;
@@ -129,6 +129,11 @@ article img {
 
 .article-body {
     padding: 24px;
+}
+.article-body p{
+    text-align: center;
+    padding: 0.5pc;
+    list-style-type: none
 }
 
 article a {
@@ -190,7 +195,18 @@ article:has(:hover, :focus) {
         display: none;
     }
 }
-
+.card{
+    background-color: #f5f5f5;
+}
+.formulario{
+    margin: auto;
+}
+.formularioMargin{
+    margin: 2pc;
+}
+.article-wrapper{
+    padding: 2pc;
+}
 @container card (min-width: 380px) {
     .article-wrapper {
         display: grid;
@@ -203,7 +219,7 @@ article:has(:hover, :focus) {
     }
 
     figure {
-        width: 100%;
+        width: auto;
         height: 100%;
         overflow: hidden;
     }
@@ -223,4 +239,58 @@ article:has(:hover, :focus) {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+}
+
+form {
+    width: 340px;
+    height: 440px;
+    background: #e6e6e6;
+    border-radius: 8px;
+    margin: calc(50vh - 220px) auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 1pc;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    border: 0px;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 0px solid #bebed2;
+}
+button:hover{
+    background-color:#ffffff;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1pc;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #bebed2;
+}
+
+input:focus {
+    border-bottom: 2px solid #78788c;
+}
+
+p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #5a5a5a;
 }

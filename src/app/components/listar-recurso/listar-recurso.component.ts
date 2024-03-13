@@ -10,7 +10,9 @@ import { Recurso } from 'src/app/models/recurso';
 })
 export class ListarRecursoComponent implements OnInit{
     mostrarSinFallos: boolean = false;
-    mostrarConFallos: boolean = false;
+  mostrarConFallos: boolean = false;
+  listRutina = false;
+  rutinas = true;
 
     mostrarDiv(opcion: string) {
         if (opcion === 'SinFallos') {
@@ -50,12 +52,13 @@ export class ListarRecursoComponent implements OnInit{
     this._recursoService.eliminarRecurso(id).subscribe(data => {
       this.toastr.error('El recurso fue eliminado con exito');
       this.obtenerRecursos();
-    }, error=> {
-       console.log(error);
+    }, error => {
+      console.log(error);
     } )
   }
 
-  
- 
-
+  muestra() {
+    this.listRutina = true;
+    this.rutinas = false;
+  }
 }

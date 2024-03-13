@@ -11,10 +11,15 @@ import { EmpleadoService } from 'src/app/services/empleado.service';
 export class ListarEmpleadosComponent implements OnInit{
   listEmpleados: Empleado [] = [];
   filterEmpleado = '';
+  listDieta = false;
+  Dietas = true;
   
 
   constructor(private _empleadoService: EmpleadoService) { }
-
+  mostrar() {
+    this.listDieta = true;
+    this.Dietas = false;
+  }
   ngOnInit(): void {
     this.obtenerEmpleados();
   }
